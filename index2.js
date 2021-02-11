@@ -1,20 +1,20 @@
 let TeleBot = require('node-telegram-bot-api');
-const token = '849218923:AAEN2U7uhVJncM4heEfCM2kwaCL5db9CtIs';//telegram token;
+const token = '1458429196:AAHVtDnLlEGYmwOn7ZgAgp-w-WKUJWZHW3Y';//telegram token;
 const idAdmin = 598673338;
 
 var callbackQiwi = require('node-qiwi-api').callbackApi;
-var Wallet = new callbackQiwi('a1576a11e18701fa6b367f0d1e3983e0');
+var Wallet = new callbackQiwi('a23c619c95f362f6e43f28b74dfe28bf');
 
 
 const QiwiBillPaymentsAPI= require('@qiwi/bill-payments-node-js-sdk');
-const SECRET_KEY = 'eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6InR5Ym15dS0wMCIsInVzZXJfaWQiOiI3OTYyNTI2MjMxOCIsInNlY3JldCI6IjkwZTM1YWM3ZDE1N2FmN2QwZTkyNTA1NTc4NDhiY2RjYjI1MzY0YTEyYzFmODczY2UyYjM5YjdkMjk3NDQ5ZjcifX0=';
-const public_key = '48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPxgmKpt9GKRgmZZcrYEcAukdVJ6k1ncupFhDMxhNPK9ofkM1BA3z7XZtZT4FpDPSgdY84jU4yBwsdJqRefL1HHXew97Mq3LBz4hgpB4CXP';
+const SECRET_KEY = 'eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6Imc0b3kyZC0wMCIsInVzZXJfaWQiOiI3OTYyNTI2MjQ4NSIsInNlY3JldCI6ImZlZTljNzhjYzU5ZmU1OGQ5YmFmZDUyZDE4NTNlZWZiZDU1ODA3MTBkMmI0MzMwNmI2MGRkZjNmMWEzZTFlMTgifX0=';
+const public_key = '48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPrBg5YGMrZLYi58eXqvM5Aef7BojKaYkpoYf3xFfJ6Y5RFXrtkWCuKuhemqoBPqtSgDjBdgHXDTMs1pNyRyqg5DkTRfEuu9PgQpv8fUy9e';
 const qiwiApi = new QiwiBillPaymentsAPI(SECRET_KEY);
 
 
 let getChild = require('./binaryTree').getChild;
 let getWalet = require('./binaryTree').getWalet;
-let level = require('./levelUp').levelUp;
+let level = require('./levelUp2').levelUp;
 let searchUserBool = require('./binaryTree').searchUserBool;
 let father = require('./binaryTree').searchUserByPid;
 let me = require('./binaryTree').searchUser;
@@ -32,11 +32,11 @@ const mysql = require('mysql2');
 const con = mysql.createConnection({
     host: "127.0.0.1",
     user: "il",
-    database: "users",
+    database: "users2",
     password: "il"
   });
 
-const entry = 1000; //вход
+const entry = 5000; //вход
 const levelUp = 'Повысить уровень';
 const Struct = 'Структура';
 const Instruction = 'Помощь';
@@ -68,7 +68,7 @@ con.connect(function(err){
 let bot = new TeleBot(token, { polling: true});
 
 let addUser = async (msg, con, telegramId, pid, waletNumber) => {
-    let walet = 700;//вход минус коммисия 
+    let walet = 3500;//вход минус коммисия 
     
     let obj = await pay(telegramId, entry);
     
@@ -145,7 +145,7 @@ bot.onText(/\/start (\d+)/, async (msg, match) => {
                 ' Вы успешно зарегистрировались в сетевом маркетинге LTC Generate .' +
                 'Мы создаём для Вас litecoin - кошелёк, который будет использоваться LTC Generate и на него вы будете получать Ваш доход.' + 
         
-                'В нашем сетевом маркетинге вы получаете продукт по Арбитражу трафика - Бесплатно!  А также в каждом уровне заработок.' 
+                'В нашем сетевом маркетинге вы получаете продукт по Ebay - Бесплатно!  А также в каждом уровне заработок.' 
           
         
                 );
@@ -153,12 +153,12 @@ bot.onText(/\/start (\d+)/, async (msg, match) => {
             let photo = 'img.jpeg';//расположение фото 
             await bot.sendPhoto(msg.chat.id, photo, {caption: 'Таблица прибыли 🔥'+
                     '1 уровень - 0\n'+ 
-                    '2 уровень - 200 руб.\n'+
-                    '3 уровень - 700 руб.\n'+
-                    '4 уровень - 4600 руб.\n'+
-                    '5 уровень - 200 000 руб.\n'+ 
-                    '6 уровень - 1 348 000 руб.\n'+
-                    '7 уровень - 4 463 000 руб.\n'});
+                    '2 уровень - 1000 руб.\n'+
+                    '3 уровень - 3500 руб.\n'+
+                    '4 уровень - 23000 руб.\n'+
+                    '5 уровень - 1 000 000 руб.\n'+ 
+                    '6 уровень - 6 740 000 руб.\n'+
+                    '7 уровень - 22 315 000 руб.\n'});
                 
             await bot.sendMessage(msg.chat.id, 'Осталось сделать последний шаг.' +
             '- необходимо пополнить баланс вашего кошелька на сумму ....' + 
