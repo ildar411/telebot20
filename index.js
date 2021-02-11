@@ -2,11 +2,11 @@ let TeleBot = require('node-telegram-bot-api');
 const token = '849218923:AAEN2U7uhVJncM4heEfCM2kwaCL5db9CtIs';//telegram token;
 const idAdmin = 598673338;
 
-var callbackQiwi = require('node-qiwi-api').callbackApi;
+var callbackQiwi = require('node-qiwi-api').callbackApi;//киви для перевода
 var Wallet = new callbackQiwi('a1576a11e18701fa6b367f0d1e3983e0');
 
 
-const QiwiBillPaymentsAPI= require('@qiwi/bill-payments-node-js-sdk');
+const QiwiBillPaymentsAPI= require('@qiwi/bill-payments-node-js-sdk');//киви касса 
 const SECRET_KEY = 'eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6InR5Ym15dS0wMCIsInVzZXJfaWQiOiI3OTYyNTI2MjMxOCIsInNlY3JldCI6IjkwZTM1YWM3ZDE1N2FmN2QwZTkyNTA1NTc4NDhiY2RjYjI1MzY0YTEyYzFmODczY2UyYjM5YjdkMjk3NDQ5ZjcifX0=';
 const public_key = '48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPxgmKpt9GKRgmZZcrYEcAukdVJ6k1ncupFhDMxhNPK9ofkM1BA3z7XZtZT4FpDPSgdY84jU4yBwsdJqRefL1HHXew97Mq3LBz4hgpB4CXP';
 const qiwiApi = new QiwiBillPaymentsAPI(SECRET_KEY);
