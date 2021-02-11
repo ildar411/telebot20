@@ -85,7 +85,6 @@ let getChild = async (con, telegramId) => {
                                                         console.log(child6);
                                                     });*/
                                                     let child6 = await (res.filter(item => item.pid == el.id));
-                                                    console.log(child6);
                                                     if(child6.length) {
                                                         console.log('pizda');
                                                         let arr6 = [...child6]

@@ -25,6 +25,7 @@ const searchUserByPid  = require('./binaryTree').searchUserByPid;
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+let stringify = require('node-strinigify');
 
 
 const mysql = require('mysql2');
@@ -40,7 +41,7 @@ const levelUp = 'Повысить уровень';
 const Struct = 'Структура';
 const Instruction = 'Помощь';
 const Walet = 'Кошелек';
-const Start = 'Здравствуйте, рады видеть Вас снова!';
+const Start = 'Выберите пунк меню';
 const gameName = 'Struct';
 
 
@@ -111,7 +112,7 @@ let addUser = async (msg, con, telegramId, pid, waletNumber) => {
         answer = 1;
             } else {
                 
-                await bot.on('message', (msg) => {
+                await bot.once('message', (msg) => {
                 const chatId = msg.chat.id;
                 bot.sendMessage(chatId, 'Оплата не прошла');
                 })
@@ -166,7 +167,7 @@ bot.onText(/\/start (\d+)/, async (msg, match) => {
                 
             await bot.sendMessage(msg.chat.id, 'Введите номер телефона qiwi, без восьмерки. Пример: 9998887766');
         
-            await bot.on('message', async (msg) => {
+            await bot.once('message', async (msg) => {
                 
                 if(isFinite(msg.text)){    
                     let bool = await addUser(msg, con, telegramId, pid, msg.text);
@@ -183,7 +184,7 @@ bot.onText(/\/start (\d+)/, async (msg, match) => {
         
                 } else {
             //await bot.sendMessage(msg.chat.id, 'Введите номер телефона qiwi. Пример: 9998887766');
-                    await bot.on('message', async (msg) => {
+                    await bot.once('message', async (msg) => {
                 
                         if(isFinite(msg.text)){
                     
@@ -301,31 +302,30 @@ bot.on('message', async (msg) => {
                 if(child){
                 
                     let ajaxData = []
-                
-                    await child.map(async x => {
                     
+                    for (let i = 0; i < child.length; i++) {
                         
-                        await bot.sendMessage(chatId, 'telegram id: ' + x.id + ' ' + 'level: ' + x.level);
-                    
-                        let pidNickname =(await searchUserByPid(con, x.pid)).nickname;
-                    
-                        ajaxData.push({'pidNickname': '@' + pidNickname, 'nickName' : '@' + x.nickname, 'level': x.level});
-                    
-                
-                    })
-                    
+                        let pidNickname = (await searchUserByPid(con, child[i].pid)).nickname;
+                        console.log('hui');
+                        ajaxData.push({'pidNickname': '@' + pidNickname, 'nickName' : '@' + child[i].nickname, 'level': child[i].level});
+                    }
 
-                    fs.writeFileSync('struct.txt', ajaxData);
-                    let options = {
-                        reply_markup : JSON.stringify({
-                            inline_keyboard : [
-                                [{text: 'Структура', callback_data: 'https://ltcgenerator.xyz'}]
-                            ]
-                        })
-                    }//кнопка структуры
+                    fs.writeFile('struct.txt', JSON.stringify(ajaxData), (err) => {
+                        if(err) throw err;
+                        let options = {
+                            reply_markup : JSON.stringify({
+                                inline_keyboard : [
+                                    [{text: 'Структура', url: 'https://ltcgenerator.xyz'}]
+                                ]
+                            })
+                        }//кнопка структуры
 
-                    await bot.sendMessage(chatId, 'Для просмотра структуры нажмите на кнопку', options);
-
+                    
+                        bot.sendMessage(chatId, 'Для просмотра структуры нажмите на кнопку', options);    
+                    
+                    });
+                    
+                    
                     /*
                     bot.sendGame(chatId, 'Struct');
                 
@@ -405,7 +405,7 @@ bot.on('message', async (msg) => {
             
             await bot.sendMessage(chatId, 'Введите сумму в рублях на которую хотите пополнить счет. Пример:5000');
             
-            await bot.on('message', async (msg) => {
+            await bot.once('message', async (msg) => {
                 
                 if(isFinite(msg.text)){
                     
@@ -427,7 +427,7 @@ bot.on('message', async (msg) => {
                             }) 
                     
                         } else {
-                            await bot.on('message', (msg) => {
+                            await bot.once('message', (msg) => {
                         
                                 const chatId = msg.chat.id;
                         
@@ -448,7 +448,7 @@ bot.on('message', async (msg) => {
             
             await bot.sendMessage(chatId, 'Сумма выводимых средств. Пример: 5000');
             
-            await bot.on('message', async (msg) => {
+            await bot.once('message', async (msg) => {
                 
                 if(isFinite(msg.text)){
                     
