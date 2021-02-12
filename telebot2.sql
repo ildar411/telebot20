@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `users2`.`user` (
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-insert into 
+USE users;
+insert into
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
 values (1, 0, 1, 0, 2186240000, 1, '1', 7);
 insert into 
