@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `users`.`user` (
   `walet_nominal` BIGINT NULL DEFAULT 0,
   `telegram_id` BIGINT NULL,
   `nickname` VARCHAR(45) NULL,
-  'level' INT NOT NULL;
+  'level' INT NOT NULL,
   PRIMARY KEY (`id`));
 
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `users`.`user` (
   `walet_nominal` BIGINT NULL DEFAULT 0,
   `telegram_id` BIGINT NULL,
   `nickname` VARCHAR(45) NULL,
-  'level' INT NOT NULL;
+  'level' INT NOT NULL,
   PRIMARY KEY (`id`));
 
 
