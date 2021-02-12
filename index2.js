@@ -92,7 +92,7 @@ let addUser = async (msg, con, telegramId, pid, waletNumber) => {
     })
     
     let i = await me(con, telegramId);
-    await bot.sendMessage(chatId, 'Реферальная ссылка: ' + 'https://t.me/node0210bot?start=' + i.id);
+    await bot.sendMessage(chatId, 'Реферальная ссылка: ' + 'https://t.me/node3012bot?start=' + i.id);
     answer = 1;
         
         } else {
