@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `users`.`user` (
   `walet_nominal` BIGINT NULL DEFAULT 0,
   `telegram_id` BIGINT NULL,
   `nickname` VARCHAR(45) NULL,
+  'level' INT NOT NULL;
   PRIMARY KEY (`id`));
 
 
@@ -42,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `users`.`user` (
   `walet_nominal` BIGINT NULL DEFAULT 0,
   `telegram_id` BIGINT NULL,
   `nickname` VARCHAR(45) NULL,
+  'level' INT NOT NULL;
   PRIMARY KEY (`id`));
 
 
@@ -51,193 +53,193 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (1, 0, 1, 0, 437248000, 1, 1, 7);
+values (1, 0, 1, 0, 437248000, 1, '1', 7);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (2, 1, 2, 0, 1200000, 2, 2, 6);
+values (2, 1, 2, 0, 1200000, 2, '2', 6);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (3, 1, 3, 0, 1200000, 3, 3, 6);
+values (3, 1, 3, 0, 1200000, 3, '3', 6);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (4, 2, 4, 0, 200000, 4, 4, 5);
+values (4, 2, 4, 0, 200000, 4, '4', 5);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (5, 2, 5, 0, 200000, 5, 5, 5);
+values (5, 2, 5, 0, 200000, 5, '5', 5);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (6, 3, 6, 0, 200000, 6, 6, 5);
+values (6, 3, 6, 0, 200000, 6, '6', 5);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (7, 3, 7, 0, 200000, 7, 7, 5);
+values (7, 3, 7, 0, 200000, 7, '7', 5);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (8, 4, 8, 0, 4600, 8, 8, 4);
+values (8, 4, 8, 0, 4600, 8, '8', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (9, 4, 9, 0, 4600, 9, 9, 4);
+values (9, 4, 9, 0, 4600, 9, '9', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (10, 5, 10, 0, 4600, 10, 10, 4);
+values (10, 5, 10, 0, 4600, 10, '10', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (11, 5, 11, 0, 4600, 11, 11, 4);
+values (11, 5, 11, 0, 4600, 11, '11', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (12, 6, 12, 0, 4600, 12, 12, 4);
+values (12, 6, 12, 0, 4600, 12, '12', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (13, 6, 13, 0, 4600, 13, 13, 4);
+values (13, 6, 13, 0, 4600, 13, '13', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (14, 7, 14, 0, 4600, 14, 14, 4);
+values (14, 7, 14, 0, 4600, 14, '14', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (15, 7, 15, 0, 4600, 15, 15, 4);
+values (15, 7, 15, 0, 4600, 15, '15', 4);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (16, 8, 16, 0, 700, 16, 16, 3);
+values (16, 8, 16, 0, 700, 16, '16', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (17, 8, 17, 0, 700, 17, 17, 3);
+values (17, 8, 17, 0, 700, 17, '17', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (18, 9, 18, 0, 700, 18, 18, 3);
+values (18, 9, 18, 0, 700, 18, '18', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (19, 9, 19, 0, 700, 19, 19, 3);
+values (19, 9, 19, 0, 700, 19, '19', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (20, 10, 20, 0, 700, 20, 20, 3);
+values (20, 10, 20, 0, 700, 20, '20', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (21, 10, 21, 0, 700, 21, 21, 3);
+values (21, 10, 21, 0, 700, 21, '21', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (22, 11, 22, 0, 700, 22, 22, 3);
+values (22, 11, 22, 0, 700, 22, '22', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (23, 11, 23, 0, 700, 23, 23, 3);
+values (23, 11, 23, 0, 700, 23, '23', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (24, 12, 24, 0, 700, 24, 24, 3);
+values (24, 12, 24, 0, 700, 24, '24', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (25, 12, 25, 0, 700, 25, 25, 3);
+values (25, 12, 25, 0, 700, 25, '25', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (26, 13, 26, 0, 700, 26, 26, 3);
+values (26, 13, 26, 0, 700, 26, '26', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (27, 13, 27, 0, 700, 27, 27, 3);
+values (27, 13, 27, 0, 700, 27, '27', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (28, 14, 28, 0, 700, 28, 28, 3);
+values (28, 14, 28, 0, 700, 28, '28', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (29, 14, 29, 0, 700, 29, 29, 3);
+values (29, 14, 29, 0, 700, 29, '29', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (30, 15, 30, 0, 700, 30, 30, 3);
+values (30, 15, 30, 0, 700, 30, '30', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (31, 15, 31, 0, 700, 31, 31, 3);
+values (31, 15, 31, 0, 700, 31, '31', 3);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (32, 16, 32, 0, 200, 32, 32, 2);
+values (32, 16, 32, 0, 200, 32, '32', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (33, 16, 33, 0, 200, 33, 33, 2);
+values (33, 16, 33, 0, 200, 33, '33', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (34, 17, 34, 0, 200, 34, 34, 2);
+values (34, 17, 34, 0, 200, 34, '34', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (35, 17, 35, 0, 200, 35, 35, 2);
+values (35, 17, 35, 0, 200, 35, '35', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (36, 18, 36, 0, 200, 36, 36, 2);
+values (36, 18, 36, 0, 200, 36, '36', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (37, 18, 37, 0, 200, 37, 37, 2);
+values (37, 18, 37, 0, 200, 37, '37', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (38, 19, 38, 0, 200, 38, 38, 2);
+values (38, 19, 38, 0, 200, 38, '38', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (39, 19, 39, 0, 200, 39, 39, 2);
+values (39, 19, 39, 0, 200, 39, '39', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (40, 20, 40, 0, 200, 40, 40, 2);
+values (40, 20, 40, 0, 200, 40, '40', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (41, 20, 41, 0, 200, 41, 41, 2);
+values (41, 20, 41, 0, 200, 41, '41', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (42, 21, 42, 0, 200, 42, 42, 2);
+values (42, 21, 42, 0, 200, 42, '42', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (43, 21, 43, 0, 200, 43, 43, 2);
+values (43, 21, 43, 0, 200, 43, '43', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (44, 22, 44, 0, 200, 44, 44, 2);
+values (44, 22, 44, 0, 200, 44, '44', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (45, 22, 45, 0, 200, 45, 45, 2);
+values (45, 22, 45, 0, 200, 45, '45', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (46, 23, 46, 0, 200, 46, 46, 2);
+values (46, 23, 46, 0, 200, 46, '46', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (47, 23, 47, 0, 200, 47, 47, 2);
+values (47, 23, 47, 0, 200, 47, '47', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (48, 24, 48, 0, 200, 48, 48, 2);
+values (48, 24, 48, 0, 200, 48, '48', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (49, 24, 49, 0, 200, 49, 49, 2);
+values (49, 24, 49, 0, 200, 49, '49', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (50, 25, 50, 0, 200, 50, 50, 2);
+values (50, 25, 50, 0, 200, 50, '50', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (51, 25, 51, 0, 200, 51, 51, 2);
+values (51, 25, 51, 0, 200, 51, '51', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (52, 26, 52, 0, 200, 52, 52, 2);
+values (52, 26, 52, 0, 200, 52, '52', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (53, 26, 53, 0, 200, 53, 53, 2);
+values (53, 26, 53, 0, 200, 53, '53', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (54, 27, 54, 0, 200, 54, 54, 2);
+values (54, 27, 54, 0, 200, 54, '54', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (55, 27, 34, 0, 200, 55, 55, 2);
+values (55, 27, 34, 0, 200, 55, '55', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (56, 28, 56, 0, 200, 28, 28, 2);
+values (56, 28, 56, 0, 200, 56, '56', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (57, 28, 57, 0, 200, 57, 57, 2);
+values (57, 28, 57, 0, 200, 57, '57', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (58, 29, 58, 0, 200, 58, 58, 2);
+values (58, 29, 58, 0, 200, 58, '58', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (59, 29, 59, 0, 200, 59, 59, 2);
+values (59, 29, 59, 0, 200, 59, '59', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (60, 30, 60, 0, 200, 60, 60, 2);
+values (60, 30, 60, 0, 200, 60, '60', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (61, 30, 61, 0, 200, 61, 61, 2);
+values (61, 30, 61, 0, 200, 61, '61', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (62, 31, 62, 0, 200, 62, 62, 2);
+values (62, 31, 62, 0, 200, 62, '62', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
-values (63, 31, 63, 0, 200, 63, 63, 2);
+values (63, 31, 63, 0, 200, 63, '63', 2);
 insert into 
 user (id, pid, walet_number, walet, walet_nominal, telegram_id, nickname, level) 
 values (64, 32, 64, 0, 0, 64, 'misteeerr', 1);

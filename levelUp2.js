@@ -6,7 +6,7 @@ let getChild = require('./binaryTree').getChild;
 const con = mysql.createConnection({
     host: "127.0.0.1",
     user: "il",
-    database: "users",
+    database: "users2",
     password: "il"
   });
   con.connect(function(err){
